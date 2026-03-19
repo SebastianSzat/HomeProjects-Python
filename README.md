@@ -58,6 +58,44 @@ A log file (`Clear_metadata_YYYYMMDD_HHMMSS.log`) will be created in the working
 - If a file fails to process, the error is logged and the script continues with the remaining files
 - Provided as-is, without warranty — use at your own risk
 
+## Adding Extra Metadata Fields to the Script
+
+By default, the script only processes the fields listed in the [Metadata Fields You Can Clear](#metadata-fields-you-can-clear) section above. To enable additional fields from the full list, you need to add them to the `metadata_full_names` dictionary in the script.
+
+**Find this section in `Clear_mp3_metadata.py` (around line 33):**
+
+```python
+metadata_full_names = {
+    'TIT2': 'Title',
+    'TIT3': 'Subtitle/Description',
+    ...
+}
+```
+
+**Add any extra tag from the full list below using the same format:**
+
+```python
+metadata_full_names = {
+    'TIT2': 'Title',
+    'TIT3': 'Subtitle/Description',
+    'TXXX:Rating': 'Rating',
+    'COMM': 'Comments',
+    'TPE1': 'Contributing Artist',
+    'TPE2': 'Album Artist',
+    'TALB': 'Album',
+    'TYER': 'Year (ID3v2.3)',
+    'TDRC': 'Year (ID3v2.4)',
+    'TRCK': 'Track Number',
+    'TCON': 'Genre',
+    'TCOM': 'Composer',       # <-- example: added Composer
+    'APIC': 'Album Art',      # <-- example: added Album Art
+}
+```
+
+Each field you add will appear as a yes/no prompt when the script runs. No other changes to the code are needed.
+
+---
+
 ## Full Metadata List
 
 All known ID3 metadata tags and their descriptions:
