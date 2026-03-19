@@ -57,3 +57,39 @@ A log file (`Clear_metadata_YYYYMMDD_HHMMSS.log`) will be created in the working
 - Files are modified **in place** — consider making a backup before running
 - If a file fails to process, the error is logged and the script continues with the remaining files
 - Provided as-is, without warranty — use at your own risk
+
+## Full Metadata List
+
+All known ID3 metadata tags and their descriptions:
+
+| Tag | Field |
+|-----|-------|
+| TIT1 | Content group description |
+| TIT2 | Title |
+| TIT3 | Subtitle / Description |
+| TXXX | User-defined text information |
+| COMM | Comments |
+| TP1 | Lead performer(s) / Soloist(s) |
+| TP2 | Band / Orchestra / Accompaniment |
+| TP3 | Conductor / Performer refinement |
+| TP4 | Interpreted, remixed, or otherwise modified by |
+| TPE1 | Contributing Artist |
+| TPE2 | Album Artist |
+| TALB | Album |
+| TYER | Year (ID3v2.3) |
+| TDRC | Year (ID3v2.4) |
+| TRCK | Track Number |
+| TCON | Genre |
+| TCOM | Composer |
+| TCOP | Copyright message |
+| TMED | Media type |
+| TLEN | Length (duration) |
+| TSSE | Software / Hardware and settings used for encoding |
+| USLT | Unsynchronized lyrics / text transcription |
+| UFID | Unique file identifier |
+| APIC | Attached picture (e.g. album art) |
+| PRIV | Private frame |
+| WXXX | URL link frame |
+| WCOM | Commercial information |
+| WCOP | Copyright / Legal information URL |
+| WPAY | Payment URL |
