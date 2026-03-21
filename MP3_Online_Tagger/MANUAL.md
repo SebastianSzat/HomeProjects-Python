@@ -82,7 +82,7 @@ fpcalc --version
 
 ### AcoustID API key
 
-1. Register at https://acoustid.org/api-key (free, requires only an email address)
+1. Register and get application api key at https://acoustid.org/my-applications (free, requires only an email address)
 2. Copy the key into the INI config under `[credentials]` → `acoustid_api_key`
 
 Without an API key, AcoustID fingerprint lookups are skipped entirely. The script will still run using text search only.
